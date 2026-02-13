@@ -1,0 +1,17 @@
+.git
+.gitignore
+node_modules
+.pnpm-store
+.turbo
+*.md
+.env
+.env.local
+.env*.example
+test
+vitest.config.ts
+tsconfig.json
+tsconfig.base.json
+pnpm-workspace.yaml
+turbo.json
+apps/web
+packages

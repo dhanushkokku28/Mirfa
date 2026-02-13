@@ -1,0 +1,21 @@
+{
+  "name": "@mirfa/api",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch src/server.ts",
+    "build": "tsc -p tsconfig.json",
+    "start": "node dist/server.js"
+  },
+  "dependencies": {
+    "@fastify/cors": "^9.0.0",
+    "@mirfa/crypto": "workspace:*",
+    "fastify": "^4.27.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.30",
+    "@vercel/node": "^3.2.2",
+    "tsx": "^4.15.0",
+    "typescript": "^5.5.4"
+  }
+}
