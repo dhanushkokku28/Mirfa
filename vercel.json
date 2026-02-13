@@ -1,3 +1,0 @@
-{
-  "buildCommand": "cd secure-tx && pnpm --filter @mirfa/api... build"
-}

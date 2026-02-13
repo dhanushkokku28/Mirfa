@@ -12,8 +12,8 @@ You **must create two separate Vercel projects** from your GitHub repo. Vercel c
    - Import from GitHub: `dhanushkokku28/Mirfa`
    - Framework preset: **Next.js**
 
-2. **DO NOT set Root Directory** (leave at default)
-   - The vercel.json in apps/web will handle paths automatically
+2. **Set Root Directory**
+   - Use: `secure-tx/apps/web`
 
 3. **Environment Variables:**
    - `NEXT_PUBLIC_API_URL` = `https://your-api-project.vercel.app` (from API project step 4)
@@ -31,8 +31,9 @@ You **must create two separate Vercel projects** from your GitHub repo. Vercel c
    - Import from GitHub: `dhanushkokku28/Mirfa`
    - Select "Other" for framework
 
-2. **DO NOT set Root Directory** (leave at default)
-   - The vercel.json in apps/api will handle paths automatically
+2. **Set Root Directory**
+   - Use: `secure-tx`
+   - This allows pnpm workspace dependencies to resolve
 
 3. **Environment Variables:**
    - `MASTER_KEY_HEX` = (generate key below)
@@ -85,8 +86,8 @@ $rng.GetBytes($bytes)
 ## Troubleshooting
 
 **"workspace package not found"**
-- Don't set Root Directory; leave it at default
-- Each app's vercel.json handles paths
+- Root Directory for API must be `secure-tx`
+- Root Directory for Web must be `secure-tx/apps/web`
 
 **API startup error**
 - `MASTER_KEY_HEX` not set or invalid
