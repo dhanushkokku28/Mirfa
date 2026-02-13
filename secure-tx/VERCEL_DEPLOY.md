@@ -12,10 +12,8 @@ You **must create two separate Vercel projects** from your GitHub repo. Vercel c
    - Import from GitHub: `dhanushkokku28/Mirfa`
    - Framework preset: **Next.js**
 
-2. **Configure Root Directory:**
-   - Settings → General → Root Directory
-   - Enter: `apps/web`
-   - Save
+2. **DO NOT set Root Directory** (leave at default)
+   - The vercel.json in apps/web will handle paths automatically
 
 3. **Environment Variables:**
    - `NEXT_PUBLIC_API_URL` = `https://your-api-project.vercel.app` (from API project step 4)
@@ -31,12 +29,10 @@ You **must create two separate Vercel projects** from your GitHub repo. Vercel c
 
 1. **Create Vercel Project #2:**
    - Import from GitHub: `dhanushkokku28/Mirfa`
-   - Select "Other" for framework (not auto-detected)
+   - Select "Other" for framework
 
-2. **Configure Root Directory:**
-   - Settings → General → Root Directory
-   - Enter: `apps/api`
-   - Save
+2. **DO NOT set Root Directory** (leave at default)
+   - The vercel.json in apps/api will handle paths automatically
 
 3. **Environment Variables:**
    - `MASTER_KEY_HEX` = (generate key below)
@@ -46,7 +42,7 @@ You **must create two separate Vercel projects** from your GitHub repo. Vercel c
    - Wait for build to complete
    - Note your API URL
 
-5. **Update Web Project (back to Web Vercel Project):**
+5. **Update Web Project:**
    - Go back to Web project settings
    - Add/update `NEXT_PUBLIC_API_URL` = your API project URL
    - Trigger redeploy
@@ -88,12 +84,12 @@ $rng.GetBytes($bytes)
 
 ## Troubleshooting
 
-**"No Next.js version detected"**
-- Root Directory not set to `apps/web`
-- Check Vercel project settings
+**"workspace package not found"**
+- Don't set Root Directory; leave it at default
+- Each app's vercel.json handles paths
 
 **API startup error**
-- `MASTER_KEY_HEX` not set or invalid format
+- `MASTER_KEY_HEX` not set or invalid
 - Must be 64 hex characters (32 bytes)
 
 **Web cannot reach API**

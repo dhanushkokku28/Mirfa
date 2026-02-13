@@ -1,5 +1,6 @@
 {
   "version": 2,
-  "buildCommand": "pnpm build",
-  "outputDirectory": "dist"
+  "buildCommand": "cd apps/api && pnpm build",
+  "outputDirectory": "apps/api/dist"
 }
+
