@@ -1,5 +1,5 @@
 {
   "version": 2,
-  "buildCommand": "pnpm build"
+  "buildCommand": "cd secure-tx/apps/api && pnpm build"
 }
 
