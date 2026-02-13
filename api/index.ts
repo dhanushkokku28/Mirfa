@@ -1,6 +1,6 @@
 import type { VercelRequest, VercelResponse } from "@vercel/node";
-import { buildApp } from "../secure-tx/apps/api/src/app.js";
-import { loadConfig } from "../secure-tx/apps/api/src/config.js";
+import { buildApp } from "../secure-tx/apps/api/dist/app.js";
+import { loadConfig } from "../secure-tx/apps/api/dist/config.js";
 
 let app: any;
 
