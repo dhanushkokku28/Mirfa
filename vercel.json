@@ -1,0 +1,3 @@
+{
+  "buildCommand": "cd secure-tx && pnpm build"
+}

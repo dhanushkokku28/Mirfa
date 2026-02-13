@@ -1,11 +1,11 @@
 import type { VercelRequest, VercelResponse } from "@vercel/node";
-import { buildApp } from "../secure-tx/apps/api/dist/app.js";
-import { loadConfig } from "../secure-tx/apps/api/dist/config.js";
 
 let app: any;
 
 const getApp = async () => {
   if (!app) {
+    const { buildApp } = await import("../secure-tx/apps/api/dist/app.js");
+    const { loadConfig } = await import("../secure-tx/apps/api/dist/config.js");
     const config = loadConfig();
     app = await buildApp(config.masterKeyHex);
   }
@@ -17,3 +17,4 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
   await app.ready();
   app.server.emit("request", req, res);
 }
+
