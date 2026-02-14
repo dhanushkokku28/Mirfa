@@ -1,4 +1,10 @@
 {
   "installCommand": "pnpm install",
-  "buildCommand": "pnpm --filter @mirfa/api... build"
+  "buildCommand": "pnpm --filter @mirfa/api... build",
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/api"
+    }
+  ]
 }
