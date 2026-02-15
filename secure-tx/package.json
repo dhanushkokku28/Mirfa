@@ -12,6 +12,7 @@
     "test": "turbo run test"
   },
   "devDependencies": {
+    "@vercel/node": "^3.2.2",
     "turbo": "^2.0.0",
     "typescript": "^5.5.4"
   }
