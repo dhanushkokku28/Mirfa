@@ -4,8 +4,8 @@ let app: any;
 
 const getApp = async () => {
   if (!app) {
-    const { buildApp } = await import("../apps/api/dist/src/app.js");
-    const { loadConfig } = await import("../apps/api/dist/src/config.js");
+    const { buildApp } = await import("../apps/api/src/app.js");
+    const { loadConfig } = await import("../apps/api/src/config.js");
     const config = loadConfig();
     app = await buildApp(config.masterKeyHex);
   }
