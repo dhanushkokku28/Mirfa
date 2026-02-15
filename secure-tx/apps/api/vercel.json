@@ -5,7 +5,13 @@
   "builds": [
     {
       "src": "api/index.ts",
-      "use": "@vercel/node"
+      "use": "@vercel/node",
+      "config": {
+        "includeFiles": [
+          "packages/crypto/dist/**",
+          "packages/crypto/package.json"
+        ]
+      }
     }
   ],
   "routes": [
