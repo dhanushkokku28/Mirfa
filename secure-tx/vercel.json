@@ -1,10 +1,17 @@
 {
+  "version": 2,
   "installCommand": "pnpm install",
   "buildCommand": "pnpm --filter @mirfa/api... build",
-  "rewrites": [
+  "builds": [
     {
-      "source": "/(.*)",
-      "destination": "/api"
+      "src": "api/index.ts",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "api/index.ts"
     }
   ]
 }

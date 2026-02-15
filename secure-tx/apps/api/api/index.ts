@@ -1,11 +1,11 @@
 import type { VercelRequest, VercelResponse } from "@vercel/node";
-import { buildApp } from "../src/app.js";
-import { loadConfig } from "../src/config.js";
 
 let app: any;
 
 const getApp = async () => {
   if (!app) {
+    const { buildApp } = await import("../dist/src/app.js");
+    const { loadConfig } = await import("../dist/src/config.js");
     const config = loadConfig();
     app = await buildApp(config.masterKeyHex);
   }
