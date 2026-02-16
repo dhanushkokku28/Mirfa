@@ -1,7 +1,6 @@
 {
   "name": "secure-tx",
   "private": true,
-  "type": "module",
   "packageManager": "pnpm@9.0.0",
   "engines": {
     "node": ">=20"
