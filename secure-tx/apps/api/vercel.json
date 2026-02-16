@@ -1,5 +1,6 @@
 {
   "version": 2,
+  "outputDirectory": "",
   "installCommand": "cd ../.. && pnpm install",
   "buildCommand": "cd ../.. && pnpm --filter @mirfa/api... build",
   "functions": {
