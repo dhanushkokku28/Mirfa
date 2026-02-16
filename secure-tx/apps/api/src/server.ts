@@ -4,7 +4,7 @@ import { buildApp } from "./app.js";
 const config = loadConfig();
 const app = await buildApp(config.masterKeyHex);
 
-app.listen({ port: config.port, host: "0.0.0.0" }).catch((error) => {
+app.listen({ port: config.port, host: "0.0.0.0" }).catch((error: any) => {
   app.log.error(error);
   process.exit(1);
 });
