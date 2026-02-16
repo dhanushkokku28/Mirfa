@@ -4,7 +4,7 @@
   "installCommand": "cd ../.. && pnpm install",
   "buildCommand": "cd ../.. && pnpm --filter @mirfa/api... build",
   "functions": {
-    "api/index.ts": {
+    "api/index.mjs": {
       "runtime": "@vercel/node@3.2.2",
       "includeFiles": "packages/crypto/**"
     }
