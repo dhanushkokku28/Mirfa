@@ -6,7 +6,10 @@
   "functions": {
     "api/index.ts": {
       "runtime": "@vercel/node@3.2.2",
-      "includeFiles": "packages/crypto/**"
+      "includeFiles": "packages/crypto/**",
+      "config": {
+        "esm": true
+      }
     }
   },
   "rewrites": [
