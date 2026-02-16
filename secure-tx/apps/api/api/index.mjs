@@ -1,5 +1,5 @@
-import { buildApp } from "../src/app.js";
-import { loadConfig } from "../src/config.js";
+import { buildApp } from "../dist/src/app.js";
+import { loadConfig } from "../dist/src/config.js";
 
 let app;
 

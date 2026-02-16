@@ -1,12 +1,12 @@
 {
   "version": 2,
   "outputDirectory": "",
-  "installCommand": "cd ../.. && pnpm install",
+  "installCommand": "cd ../.. && pnpm install; pnpm --filter @mirfa/crypto... build; pnpm --filter @mirfa/api... build",
   "buildCommand": "cd ../.. && pnpm --filter @mirfa/api... build",
   "functions": {
     "api/index.mjs": {
       "runtime": "@vercel/node@3.2.2",
-      "includeFiles": "packages/crypto/**"
+      "includeFiles": "{apps/api/dist/**,packages/crypto/dist/**,packages/crypto/package.json}"
     }
   },
   "rewrites": [
