@@ -1,8 +1,8 @@
 {
   "version": 2,
   "outputDirectory": "",
-  "installCommand": "pnpm install; pnpm --filter @mirfa/crypto... build; pnpm --filter @mirfa/api... build",
-  "buildCommand": "pnpm --filter @mirfa/api... build",
+  "installCommand": "pnpm install && pnpm --filter @mirfa/crypto... build && pnpm --filter @mirfa/api... build",
+  "buildCommand": "echo 'Build complete'",
   "functions": {
     "api/index.mjs": {
       "runtime": "@vercel/node@3.2.2",
